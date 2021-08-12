@@ -1,0 +1,36 @@
+{
+  "name": "textbox",
+  "widgetName": "TextBox",
+  "version": "1.0.0",
+  "description": "Description",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Michael Nguyen",
+  "engines": {
+    "node": ">=12"
+  },
+  "config": {
+    "projectPath": "./tests/testProject/",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "byu oit",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "test": "pluggable-widgets-tools test:unit:web --no-cache --ci && npm run test:e2e",
+    "test:unit": "pluggable-widgets-tools test:unit:web --coverage",
+    "test:e2e": "pluggable-widgets-tools test:e2e --url \"https://badge.mxapps.io\"",
+    "test:e2e:dev": "pluggable-widgets-tools test:e2e --debug",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^9.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
+}
